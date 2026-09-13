@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hanishka | Portfolio</title>
+    <title>Hanishka | AI & Data Science Portfolio</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -59,14 +59,8 @@
         }
 
         /* ===== RESET & BASE ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-primary);
@@ -75,34 +69,15 @@
             transition: background-color 0.4s, color 0.4s;
             overflow-x: hidden;
         }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        ul {
-            list-style: none;
-        }
-        img {
-            max-width: 100%;
-            display: block;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
         /* ===== SCROLLBAR ===== */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: var(--bg-secondary);
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--accent);
-            border-radius: 10px;
-        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-secondary); }
+        ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
 
         /* ===== BUTTONS ===== */
         .btn {
@@ -138,9 +113,15 @@
             color: var(--accent);
             transform: translateY(-2px);
         }
-        .btn-sm {
-            padding: 6px 16px;
-            font-size: 0.8rem;
+        .btn-sm { padding: 8px 18px; font-size: 0.8rem; }
+        .btn-gh {
+            background: #24292e;
+            color: #fff;
+            border: none;
+        }
+        .btn-gh:hover {
+            background: #1a1f24;
+            transform: translateY(-2px);
         }
 
         /* ===== NAVIGATION ===== */
@@ -168,9 +149,7 @@
             letter-spacing: -0.5px;
             color: var(--accent);
         }
-        .logo span {
-            color: var(--text-primary);
-        }
+        .logo span { color: var(--text-primary); }
         .nav-links {
             display: flex;
             align-items: center;
@@ -195,24 +174,12 @@
             background: var(--accent);
             transition: var(--transition);
         }
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-        .nav-links a.active {
-            color: var(--accent);
-        }
-        .nav-links a.active::after {
-            width: 100%;
-        }
+        .nav-links a:hover { color: var(--accent); }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-links a.active { color: var(--accent); }
+        .nav-links a.active::after { width: 100%; }
 
-        .nav-actions {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
+        .nav-actions { display: flex; align-items: center; gap: 16px; }
         .theme-toggle {
             background: var(--bg-secondary);
             border: 1px solid var(--border-color);
@@ -227,10 +194,7 @@
             color: var(--text-secondary);
             transition: var(--transition);
         }
-        .theme-toggle:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
+        .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
         .menu-toggle {
             display: none;
             background: none;
@@ -241,7 +205,7 @@
             padding: 4px;
         }
 
-        /* ===== FLOATING SOCIAL BAR (RIGHT SIDE) ===== */
+        /* ===== FLOATING SOCIAL BAR ===== */
         .floating-social {
             position: fixed;
             right: 20px;
@@ -280,40 +244,24 @@
         }
 
         /* ============================================================
-               PAGE SECTIONS – Hidden by default, shown via JS
+               PAGE SECTIONS
             ============================================================ */
         .page-section {
             display: none;
-            /* hidden until clicked */
             min-height: 100vh;
             padding: 120px 0 80px;
             animation: fadeIn 0.4s ease;
         }
-        .page-section.active {
-            display: block;
-        }
-        #home.active {
-            display: flex;
-            align-items: center;
-        }
+        .page-section.active { display: block; }
+        #home.active { display: flex; align-items: center; }
 
         @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
 
-        /* ===== HOME (HERO) ===== */
-        #home {
-            background: var(--hero-gradient);
-            transition: background 0.4s;
-            min-height: 100vh;
-        }
+        /* ===== HOME ===== */
+        #home { background: var(--hero-gradient); transition: background 0.4s; min-height: 100vh; }
         #home .container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -328,15 +276,8 @@
             letter-spacing: -1px;
             margin-bottom: 8px;
         }
-        .hero-content h1 .highlight {
-            color: var(--accent);
-        }
-        .hero-subtitle {
-            font-size: 1.15rem;
-            color: var(--text-secondary);
-            margin-bottom: 6px;
-            font-weight: 500;
-        }
+        .hero-content h1 .highlight { color: var(--accent); }
+        .hero-subtitle { font-size: 1.15rem; color: var(--text-secondary); margin-bottom: 6px; font-weight: 500; }
         .hero-role {
             display: inline-block;
             background: var(--tag-bg);
@@ -347,23 +288,9 @@
             font-weight: 600;
             margin-bottom: 16px;
         }
-        .hero-description {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            max-width: 480px;
-            margin-bottom: 28px;
-            line-height: 1.7;
-        }
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-        }
-        .hero-social {
-            display: flex;
-            gap: 14px;
-            margin-top: 24px;
-        }
+        .hero-description { font-size: 1.05rem; color: var(--text-secondary); max-width: 480px; margin-bottom: 28px; line-height: 1.7; }
+        .hero-buttons { display: flex; flex-wrap: wrap; gap: 14px; }
+        .hero-social { display: flex; gap: 14px; margin-top: 24px; }
         .hero-social a {
             display: inline-flex;
             align-items: center;
@@ -408,26 +335,10 @@
         }
 
         /* ===== ABOUT ===== */
-        #about {
-            background: var(--bg-secondary);
-        }
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-            align-items: start;
-        }
-        .about-text p {
-            color: var(--text-secondary);
-            font-size: 1.05rem;
-            line-height: 1.8;
-            margin-bottom: 16px;
-        }
-        .about-stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
+        #about { background: var(--bg-secondary); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+        .about-text p { color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8; margin-bottom: 16px; }
+        .about-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
         .stat-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -437,22 +348,9 @@
             transition: var(--transition);
             box-shadow: var(--shadow);
         }
-        .stat-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--accent);
-        }
-        .stat-card .stat-number {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--accent);
-            display: block;
-        }
-        .stat-card .stat-label {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
+        .stat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--accent); }
+        .stat-card .stat-number { font-size: 2rem; font-weight: 800; color: var(--accent); display: block; }
+        .stat-card .stat-label { font-size: 0.9rem; color: var(--text-muted); font-weight: 500; }
 
         /* ===== EDUCATION ===== */
         .education-card {
@@ -465,16 +363,8 @@
             max-width: 720px;
             margin: 0 auto;
         }
-        .education-card:hover {
-            box-shadow: var(--shadow-hover);
-            border-color: var(--accent);
-        }
-        .edu-header {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 16px;
-        }
+        .education-card:hover { box-shadow: var(--shadow-hover); border-color: var(--accent); }
+        .edu-header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
         .edu-header .edu-icon {
             width: 56px;
             height: 56px;
@@ -487,10 +377,7 @@
             color: var(--accent);
             flex-shrink: 0;
         }
-        .edu-header h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-        }
+        .edu-header h3 { font-size: 1.3rem; font-weight: 700; }
         .edu-header .edu-year {
             font-size: 0.85rem;
             font-weight: 500;
@@ -500,23 +387,9 @@
             border-radius: 50px;
             margin-left: auto;
         }
-        .edu-details {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px 32px;
-            margin-top: 12px;
-        }
-        .edu-details .edu-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-        .edu-details .edu-item i {
-            color: var(--accent);
-            width: 20px;
-        }
+        .edu-details { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 32px; margin-top: 12px; }
+        .edu-details .edu-item { display: flex; align-items: center; gap: 10px; color: var(--text-secondary); font-size: 0.95rem; }
+        .edu-details .edu-item i { color: var(--accent); width: 20px; }
         .edu-achievement {
             margin-top: 18px;
             padding: 14px 20px;
@@ -529,19 +402,11 @@
             font-weight: 600;
             font-size: 0.95rem;
         }
-        .edu-achievement i {
-            font-size: 1.2rem;
-        }
+        .edu-achievement i { font-size: 1.2rem; }
 
         /* ===== SKILLS ===== */
-        #skills {
-            background: var(--bg-secondary);
-        }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 28px;
-        }
+        #skills { background: var(--bg-secondary); }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
         .skill-category {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -550,10 +415,7 @@
             box-shadow: var(--shadow);
             transition: var(--transition);
         }
-        .skill-category:hover {
-            box-shadow: var(--shadow-hover);
-            border-color: var(--accent);
-        }
+        .skill-category:hover { box-shadow: var(--shadow-hover); border-color: var(--accent); }
         .skill-category h4 {
             font-size: 1.05rem;
             font-weight: 700;
@@ -562,14 +424,8 @@
             align-items: center;
             gap: 10px;
         }
-        .skill-category h4 i {
-            color: var(--accent);
-        }
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+        .skill-category h4 i { color: var(--accent); }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 10px; }
         .skill-tag {
             background: var(--bg-secondary);
             padding: 6px 16px;
@@ -580,19 +436,10 @@
             border: 1px solid var(--border-color);
             transition: var(--transition);
         }
-        .skill-tag:hover {
-            background: var(--accent);
-            color: #fff;
-            border-color: var(--accent);
-            transform: translateY(-2px);
-        }
+        .skill-tag:hover { background: var(--accent); color: #fff; border-color: var(--accent); transform: translateY(-2px); }
 
         /* ===== PROJECTS ===== */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 28px;
-        }
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; }
         .project-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -603,6 +450,8 @@
             position: relative;
             overflow: hidden;
             cursor: pointer;
+            display: flex;
+            flex-direction: column;
         }
         .project-card::before {
             content: '';
@@ -616,14 +465,8 @@
             transition: var(--transition);
             transform-origin: left;
         }
-        .project-card:hover::before {
-            transform: scaleX(1);
-        }
-        .project-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--accent);
-        }
+        .project-card:hover::before { transform: scaleX(1); }
+        .project-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); border-color: var(--accent); }
         .project-icon {
             width: 48px;
             height: 48px;
@@ -636,37 +479,50 @@
             color: var(--accent);
             margin-bottom: 16px;
         }
-        .project-card h4 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-        .project-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-        .project-status {
-            display: inline-block;
-            margin-top: 12px;
-            font-size: 0.75rem;
+        .project-card h4 { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
+        .project-card .project-summary { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1; }
+        .project-tech { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+        .project-tech span {
+            font-size: 0.7rem;
             font-weight: 600;
             background: var(--tag-bg);
             color: var(--tag-text);
+            padding: 3px 10px;
+            border-radius: 50px;
+            letter-spacing: 0.3px;
+        }
+        .project-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 16px;
+            padding-top: 14px;
+            border-top: 1px solid var(--border-color);
+        }
+        .project-status {
+            font-size: 0.7rem;
+            font-weight: 600;
             padding: 4px 14px;
             border-radius: 50px;
             letter-spacing: 0.5px;
         }
+        .status-completed { background: #d4edda; color: #155724; }
+        .status-progress { background: #fff3cd; color: #856404; }
+        .status-concept { background: #cce5ff; color: #004085; }
+        [data-theme="dark"] .status-completed { background: #1a3a2a; color: #6ee7a0; }
+        [data-theme="dark"] .status-progress { background: #3a2e1a; color: #fbbf24; }
+        [data-theme="dark"] .status-concept { background: #1a2a3a; color: #6ea8fe; }
+
+        .project-footer .gh-link {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            transition: var(--transition);
+        }
+        .project-footer .gh-link:hover { color: var(--accent); transform: scale(1.2); }
 
         /* ===== CERTIFICATIONS ===== */
-        #certificates {
-            background: var(--bg-secondary);
-        }
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 24px;
-        }
+        #certificates { background: var(--bg-secondary); }
+        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
         .cert-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -678,11 +534,7 @@
             align-items: center;
             gap: 16px;
         }
-        .cert-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--accent);
-        }
+        .cert-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--accent); }
         .cert-icon {
             width: 48px;
             height: 48px;
@@ -695,35 +547,14 @@
             color: var(--accent);
             flex-shrink: 0;
         }
-        .cert-info h4 {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 2px;
-        }
-        .cert-info p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
+        .cert-info h4 { font-size: 1rem; font-weight: 600; margin-bottom: 2px; }
+        .cert-info p { font-size: 0.85rem; color: var(--text-muted); }
 
         /* ===== CONTACT ===== */
-        #contact {
-            background: var(--bg-secondary);
-        }
-        .contact-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-            align-items: start;
-        }
-        .contact-info h3 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-        .contact-info p {
-            color: var(--text-secondary);
-            margin-bottom: 24px;
-        }
+        #contact { background: var(--bg-secondary); }
+        .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+        .contact-info h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 8px; }
+        .contact-info p { color: var(--text-secondary); margin-bottom: 24px; }
         .contact-item {
             display: flex;
             align-items: center;
@@ -732,9 +563,7 @@
             border-bottom: 1px solid var(--border-color);
             transition: var(--transition);
         }
-        .contact-item:last-child {
-            border-bottom: none;
-        }
+        .contact-item:last-child { border-bottom: none; }
         .contact-item .ci-icon {
             width: 44px;
             height: 44px;
@@ -747,19 +576,9 @@
             font-size: 1.1rem;
             flex-shrink: 0;
         }
-        .contact-item .ci-text {
-            font-weight: 500;
-            color: var(--text-primary);
-        }
-        .contact-item .ci-sub {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-        .contact-social {
-            display: flex;
-            gap: 12px;
-            margin-top: 20px;
-        }
+        .contact-item .ci-text { font-weight: 500; color: var(--text-primary); }
+        .contact-item .ci-sub { font-size: 0.85rem; color: var(--text-muted); }
+        .contact-social { display: flex; gap: 12px; margin-top: 20px; }
         .contact-social a {
             width: 48px;
             height: 48px;
@@ -786,21 +605,9 @@
             padding: 32px;
             box-shadow: var(--shadow);
         }
-        .contact-form h4 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-        .form-group {
-            margin-bottom: 16px;
-        }
-        .form-group label {
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 4px;
-            color: var(--text-secondary);
-        }
+        .contact-form h4 { font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; }
+        .form-group { margin-bottom: 16px; }
+        .form-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; color: var(--text-secondary); }
         .form-group input,
         .form-group textarea {
             width: 100%;
@@ -819,17 +626,10 @@
             border-color: var(--accent);
             box-shadow: 0 0 0 4px var(--accent-light);
         }
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
+        .form-group textarea { min-height: 120px; resize: vertical; }
 
-        /* ===== SECTION HEADER (shared) ===== */
-        .section-header {
-            text-align: center;
-            max-width: 640px;
-            margin: 0 auto 48px;
-        }
+        /* ===== SECTION HEADER ===== */
+        .section-header { text-align: center; max-width: 640px; margin: 0 auto 48px; }
         .section-header .section-tag {
             display: inline-block;
             font-size: 0.8rem;
@@ -842,16 +642,8 @@
             border-radius: 50px;
             margin-bottom: 10px;
         }
-        .section-header h2 {
-            font-size: 2.4rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            margin-bottom: 12px;
-        }
-        .section-header p {
-            color: var(--text-secondary);
-            font-size: 1.05rem;
-        }
+        .section-header h2 { font-size: 2.4rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 12px; }
+        .section-header p { color: var(--text-secondary); font-size: 1.05rem; }
 
         /* ===== MODAL ===== */
         .modal-overlay {
@@ -868,13 +660,11 @@
             align-items: center;
             padding: 20px;
         }
-        .modal-overlay.active {
-            display: flex;
-        }
+        .modal-overlay.active { display: flex; }
         .modal-content {
             background: var(--bg-card);
             border-radius: var(--radius);
-            max-width: 700px;
+            max-width: 750px;
             width: 100%;
             max-height: 85vh;
             overflow-y: auto;
@@ -884,14 +674,8 @@
             animation: modalFade 0.3s ease;
         }
         @keyframes modalFade {
-            0% {
-                opacity: 0;
-                transform: scale(0.95) translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1) translateY(0);
-            }
+            0% { opacity: 0; transform: scale(0.95) translateY(20px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
         }
         .modal-close {
             position: absolute;
@@ -904,32 +688,22 @@
             background: none;
             border: none;
         }
-        .modal-close:hover {
-            color: var(--text-primary);
-            transform: rotate(90deg);
+        .modal-close:hover { color: var(--text-primary); transform: rotate(90deg); }
+        .modal-content h2 { font-size: 1.8rem; font-weight: 700; margin-bottom: 12px; color: var(--accent); }
+        .modal-content .modal-status { display: inline-block; margin-bottom: 16px; }
+        .modal-content p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px; }
+        .modal-content ul { list-style: disc; padding-left: 20px; margin-bottom: 16px; }
+        .modal-content ul li { color: var(--text-secondary); margin-bottom: 6px; font-size: 0.95rem; }
+        .modal-tech { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+        .modal-tech span {
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 5px 14px;
+            border-radius: 50px;
         }
-        .modal-content h2 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: var(--accent);
-        }
-        .modal-content p {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 16px;
-        }
-        .modal-content .modal-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 20px;
-        }
-        .modal-content .modal-actions a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
+        .modal-content .modal-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-color); }
 
         /* ===== FOOTER ===== */
         footer {
@@ -941,52 +715,21 @@
             font-size: 0.9rem;
             margin-top: 40px;
         }
-        footer a {
-            color: var(--accent);
-            font-weight: 500;
-        }
+        footer a { color: var(--accent); font-weight: 500; }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
-            #home .container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            .hero-content h1 {
-                font-size: 2.8rem;
-            }
-            .hero-description {
-                max-width: 100%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .hero-buttons {
-                justify-content: center;
-            }
-            .hero-social {
-                justify-content: center;
-            }
-            .profile-wrapper {
-                width: 300px;
-                height: 300px;
-            }
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-            .contact-wrapper {
-                grid-template-columns: 1fr;
-            }
-            .floating-social {
-                right: 10px;
-                padding: 10px 6px;
-            }
-            .floating-social a {
-                width: 36px;
-                height: 36px;
-                font-size: 1rem;
-            }
+            #home .container { grid-template-columns: 1fr; text-align: center; }
+            .hero-content h1 { font-size: 2.8rem; }
+            .hero-description { max-width: 100%; margin-left: auto; margin-right: auto; }
+            .hero-buttons { justify-content: center; }
+            .hero-social { justify-content: center; }
+            .profile-wrapper { width: 300px; height: 300px; }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-wrapper { grid-template-columns: 1fr; }
+            .floating-social { right: 10px; padding: 10px 6px; }
+            .floating-social a { width: 36px; height: 36px; font-size: 1rem; }
         }
-
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -1001,34 +744,15 @@
                 border-bottom: 1px solid var(--border-color);
                 gap: 16px;
             }
-            .nav-links.open {
-                display: flex;
-            }
-            .menu-toggle {
-                display: block;
-            }
-            .hero-content h1 {
-                font-size: 2.2rem;
-            }
-            .profile-wrapper {
-                width: 240px;
-                height: 240px;
-            }
-            .section-header h2 {
-                font-size: 1.8rem;
-            }
-            .edu-details {
-                grid-template-columns: 1fr;
-            }
-            .education-card {
-                padding: 24px 20px;
-            }
-            .contact-form {
-                padding: 24px 20px;
-            }
-            .about-stats {
-                grid-template-columns: 1fr 1fr;
-            }
+            .nav-links.open { display: flex; }
+            .menu-toggle { display: block; }
+            .hero-content h1 { font-size: 2.2rem; }
+            .profile-wrapper { width: 240px; height: 240px; }
+            .section-header h2 { font-size: 1.8rem; }
+            .edu-details { grid-template-columns: 1fr; }
+            .education-card { padding: 24px 20px; }
+            .contact-form { padding: 24px 20px; }
+            .about-stats { grid-template-columns: 1fr 1fr; }
             .floating-social {
                 bottom: 20px;
                 right: 10px;
@@ -1038,51 +762,20 @@
                 padding: 8px 12px;
                 border-radius: 40px;
             }
-            .floating-social a {
-                width: 34px;
-                height: 34px;
-                font-size: 0.9rem;
-            }
-            .modal-content {
-                padding: 24px;
-            }
+            .floating-social a { width: 34px; height: 34px; font-size: 0.9rem; }
+            .modal-content { padding: 24px; }
+            .projects-grid { grid-template-columns: 1fr; }
         }
-
         @media (max-width: 480px) {
-            .hero-content h1 {
-                font-size: 1.8rem;
-            }
-            .hero-role {
-                font-size: 0.8rem;
-                padding: 4px 14px;
-            }
-            .profile-wrapper {
-                width: 200px;
-                height: 200px;
-            }
-            .btn {
-                padding: 10px 20px;
-                font-size: 0.85rem;
-            }
-            .about-stats {
-                grid-template-columns: 1fr 1fr;
-                gap: 12px;
-            }
-            .stat-card {
-                padding: 16px 12px;
-            }
-            .stat-card .stat-number {
-                font-size: 1.5rem;
-            }
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-            .cert-grid {
-                grid-template-columns: 1fr;
-            }
+            .hero-content h1 { font-size: 1.8rem; }
+            .hero-role { font-size: 0.8rem; padding: 4px 14px; }
+            .profile-wrapper { width: 200px; height: 200px; }
+            .btn { padding: 10px 20px; font-size: 0.85rem; }
+            .about-stats { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .stat-card { padding: 16px 12px; }
+            .stat-card .stat-number { font-size: 1.5rem; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .cert-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -1173,17 +866,15 @@
                     <p>
                         I am a third-year B.Tech student specializing in
                         <strong>Artificial Intelligence and Data Science</strong> at
-                        CARE College of Engineering. I am deeply passionate about
-                        building intelligent systems that solve real-world problems.
+                        CARE College of Engineering. I build intelligent systems that
+                        solve real-world problems — from satellite image analysis to
+                        IoT safety systems for farmers.
                     </p>
                     <p>
                         My long-term goal is to become an <strong>Agentic AI Engineer</strong>.
                         I am currently learning Python, AI fundamentals, Agentic AI,
-                        and Large Language Models (LLMs).
-                    </p>
-                    <p>
-                        I believe in lifelong learning and enjoy collaborating on
-                        impactful projects that push the boundaries of what AI can do.
+                        and Large Language Models (LLMs), and I enjoy participating in
+                        hackathons and building practical projects.
                     </p>
                 </div>
                 <div class="about-stats">
@@ -1200,7 +891,7 @@
                         <span class="stat-label">1<sup>st</sup> Rank (Sem 4)</span>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number">5+</span>
+                        <span class="stat-number">8+</span>
                         <span class="stat-label">Projects</span>
                     </div>
                 </div>
@@ -1249,20 +940,45 @@
             </div>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h4><i class="fas fa-code"></i> Programming Languages</h4>
+                    <h4><i class="fas fa-code"></i> Programming</h4>
                     <div class="skill-tags">
-                        <span class="skill-tag">Python <span style="font-size:0.7rem; opacity:0.7;">(Learning)</span></span>
-                        <span class="skill-tag">Java <span style="font-size:0.7rem; opacity:0.7;">(Beginner)</span></span>
-                        <span class="skill-tag">C <span style="font-size:0.7rem; opacity:0.7;">(Beginner)</span></span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h4><i class="fas fa-brain"></i> Currently Learning</h4>
+                    <h4><i class="fas fa-brain"></i> AI / Machine Learning</h4>
                     <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">AI Fundamentals</span>
-                        <span class="skill-tag">Agentic AI</span>
-                        <span class="skill-tag">Large Language Models</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Hugging Face</span>
+                        <span class="skill-tag">BLIP</span>
+                        <span class="skill-tag">TensorFlow.js</span>
+                        <span class="skill-tag">VQA</span>
+                        <span class="skill-tag">LLMs</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-globe"></i> Web Development</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">SQLite</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-microchip"></i> IoT / Hardware</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ESP32</span>
+                        <span class="skill-tag">Load Cell</span>
+                        <span class="skill-tag">MPU6050</span>
+                        <span class="skill-tag">GSM</span>
+                        <span class="skill-tag">Solar</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -1271,8 +987,8 @@
                         <span class="skill-tag">Git</span>
                         <span class="skill-tag">GitHub</span>
                         <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Colab</span>
                         <span class="skill-tag">MS Word</span>
-                        <span class="skill-tag">MS PowerPoint</span>
                     </div>
                 </div>
             </div>
@@ -1285,44 +1001,128 @@
             <div class="section-header">
                 <span class="section-tag">Projects</span>
                 <h2>Things I've Built</h2>
-                <p>Click on any project to see full details.</p>
+                <p>Click any project to see full details, tech stack, and GitHub link.</p>
             </div>
             <div class="projects-grid">
+
+                <!-- SatQuery AI -->
+                <div class="project-card" data-project="satquery">
+                    <div class="project-icon"><i class="fas fa-satellite"></i></div>
+                    <h4>SatQuery AI</h4>
+                    <p class="project-summary">ISRO SIH problem – ask natural-language questions about satellite images.</p>
+                    <div class="project-tech">
+                        <span>PyTorch</span><span>Hugging Face</span><span>BLIP</span><span>Streamlit</span>
+                    </div>
+                    <div class="project-footer">
+                        <span class="project-status status-progress">Prototype</span>
+                        <a href="https://github.com/hanishka06/SatQueryAi" target="_blank" class="gh-link" onclick="event.stopPropagation();">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Gravity Ropeway Safety -->
+                <div class="project-card" data-project="ropeway">
+                    <div class="project-icon"><i class="fas fa-mountain"></i></div>
+                    <h4>Gravity Ropeway Safety System</h4>
+                    <p class="project-summary">IoT safety system idea for hill farmers – load sensing, auto-brake, GSM alerts.</p>
+                    <div class="project-tech">
+                        <span>ESP32</span><span>Load Cell</span><span>MPU6050</span><span>GSM</span>
+                    </div>
+                    <div class="project-footer">
+                        <span class="project-status status-concept">Idea</span>
+                        <i class="fas fa-circle-info" style="color:var(--text-muted);font-size:0.9rem;"></i>
+                    </div>
+                </div>
+
+                <!-- EkYatra -->
+                <div class="project-card" data-project="ekyatra">
+                    <div class="project-icon"><i class="fas fa-route"></i></div>
+                    <h4>EkYatra</h4>
+                    <p class="project-summary">Merging food delivery + ride-hailing into single trips – less pollution, lower cost.</p>
+                    <div class="project-tech">
+                        <span>Idea</span><span>Sustainability</span><span>Route Optimization</span>
+                    </div>
+                    <div class="project-footer">
+                        <span class="project-status status-concept">Idea</span>
+                        <i class="fas fa-circle-info" style="color:var(--text-muted);font-size:0.9rem;"></i>
+                    </div>
+                </div>
+
+                <!-- LunaLens -->
+                <div class="project-card" data-project="lunalens">
+                    <div class="project-icon"><i class="fas fa-moon"></i></div>
+                    <h4>LunaLens</h4>
+                    <p class="project-summary">AI assistive app for visually impaired – describes surroundings in Tamil/English.</p>
+                    <div class="project-tech">
+                        <span>Flask</span><span>TensorFlow.js</span><span>face-api.js</span><span>SQLite</span>
+                    </div>
+                    <div class="project-footer">
+                        <span class="project-status status-progress">Webpage Ready</span>
+                        <i class="fas fa-circle-info" style="color:var(--text-muted);font-size:0.9rem;"></i>
+                    </div>
+                </div>
+
                 <!-- CarryIt -->
                 <div class="project-card" data-project="carryit">
                     <div class="project-icon"><i class="fas fa-suitcase-rolling"></i></div>
                     <h4>CarryIt</h4>
-                    <p>Community travel errand network – zero commission, direct connect.</p>
-                    <span class="project-status">Completed</span>
+                    <p class="project-summary">Community travel errand network – zero commission, direct connect.</p>
+                    <div class="project-tech">
+                        <span>Node.js</span><span>Express</span><span>SQLite</span><span>JS</span>
+                    </div>
+                    <div class="project-footer">
+                        <span class="project-status status-completed">Completed</span>
+                        <a href="https://github.com/hanishka06/CarryIt" target="_blank" class="gh-link" onclick="event.stopPropagation();">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
+
                 <!-- FixItLocal -->
-                <div class="project-card" data-project="fixit">
+                <div class="project-card" data-project="fixitlocal">
                     <div class="project-icon"><i class="fas fa-wrench"></i></div>
                     <h4>FixItLocal</h4>
-                    <p>Home services platform with 20+ categories, no middlemen.</p>
-                    <span class="project-status">Completed</span>
+                    <p class="project-summary">Home services platform with 20+ categories, no middlemen.</p>
+                    <div class="project-tech">
+                        <span>Node.js</span><span>Express</span><span>SQLite</span><span>HTML/CSS</span>
+                    </div>
+                    <div class="project-footer">
+                        <span class="project-status status-completed">Completed</span>
+                        <a href="https://github.com/hanishka06/fixitlocal-project" target="_blank" class="gh-link" onclick="event.stopPropagation();">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
+
                 <!-- AutoFlow -->
                 <div class="project-card" data-project="autoflow">
                     <div class="project-icon"><i class="fas fa-traffic-light"></i></div>
                     <h4>AutoFlow – AI Traffic Management</h4>
-                    <p>CCTV‑based AI traffic management. Webpage ready; hardware integration pending.</p>
-                    <span class="project-status">Webpage Ready</span>
+                    <p class="project-summary">CCTV-based AI traffic management – detects congestion, accidents, violations.</p>
+                    <div class="project-tech">
+                        <span>AI</span><span>CCTV</span><span>Computer Vision</span>
+                    </div>
+                    <div class="project-footer">
+                        <span class="project-status status-progress">Webpage Ready</span>
+                        <i class="fas fa-circle-info" style="color:var(--text-muted);font-size:0.9rem;"></i>
+                    </div>
                 </div>
+
                 <!-- Path Finder -->
                 <div class="project-card" data-project="pathfinder">
                     <div class="project-icon"><i class="fas fa-bus"></i></div>
-                    <h4>Path Finder – Bus Tracking</h4>
-                    <p>Smart bus tracking &amp; booking app. Webpage ready; hardware pending.</p>
-                    <span class="project-status">Webpage Ready</span>
+                    <h4>Path Finder – Smart Bus Tracking</h4>
+                    <p class="project-summary">Real-time bus tracking, ETA, booking, SOS alerts – for tier-2/3 cities.</p>
+                    <div class="project-tech">
+                        <span>GPS</span><span>App</span><span>Real-time</span>
+                    </div>
+                    <div class="project-footer">
+                        <span class="project-status status-progress">Webpage Ready</span>
+                        <i class="fas fa-circle-info" style="color:var(--text-muted);font-size:0.9rem;"></i>
+                    </div>
                 </div>
-                <!-- LunaLens -->
-                <div class="project-card" data-project="lunalens">
-                    <div class="project-icon"><i class="fas fa-moon"></i></div>
-                    <h4>LunaLens – AI Assistant</h4>
-                    <p>AI assistive app for visually impaired. Webpage ready; hardware integration pending.</p>
-                    <span class="project-status">Webpage Ready</span>
-                </div>
+
             </div>
         </div>
     </section>
@@ -1346,7 +1146,7 @@
                 <div class="cert-card">
                     <div class="cert-icon"><i class="fas fa-certificate"></i></div>
                     <div class="cert-info">
-                        <h4>KR’ IDEAL-26</h4>
+                        <h4>KR' IDEAL-26</h4>
                         <p>K. Ramakrishnan College of Technology – Participation</p>
                     </div>
                 </div>
@@ -1493,12 +1293,10 @@
         <div class="modal-content">
             <button class="modal-close" id="modalClose">&times;</button>
             <h2 id="modalTitle">Project Title</h2>
-            <div id="modalBody">
-                <p>Full description goes here.</p>
-            </div>
-            <div class="modal-actions" id="modalActions">
-                <!-- Dynamic buttons inserted by JS -->
-            </div>
+            <div id="modalStatus" class="modal-status"></div>
+            <div id="modalBody"></div>
+            <div class="modal-tech" id="modalTech"></div>
+            <div class="modal-actions" id="modalActions"></div>
         </div>
     </div>
 
@@ -1509,7 +1307,6 @@
         (function() {
             'use strict';
 
-            // ----- DOM refs -----
             const navLinks = document.querySelectorAll('.nav-links a[data-target]');
             const sections = document.querySelectorAll('.page-section');
             const menuToggle = document.getElementById('menuToggle');
@@ -1519,151 +1316,248 @@
             const contactForm = document.getElementById('contactForm');
             const navbar = document.getElementById('navbar');
 
-            // Modal elements
             const modalOverlay = document.getElementById('projectModal');
             const modalClose = document.getElementById('modalClose');
             const modalTitle = document.getElementById('modalTitle');
+            const modalStatus = document.getElementById('modalStatus');
             const modalBody = document.getElementById('modalBody');
+            const modalTech = document.getElementById('modalTech');
             const modalActions = document.getElementById('modalActions');
 
-            // ----- Project data (from resume) -----
+            // ===== PROJECT DATA =====
             const projectData = {
-                carryit: {
-                    title: 'CarryIt – Travel Errand Platform',
-                    description: `A community-driven travel errand network that connects travelers with people who need items delivered between cities. Built with Node.js, Express, SQLite3, and Vanilla JS, the platform enables users to post trips or requests, find matches on the same route, and connect directly via mutual interest—all without any commission fees. (Completed)`,
-                    github: 'https://github.com/hanishka06/carryit'
+                satquery: {
+                    title: 'SatQuery AI',
+                    status: 'Prototype + GitHub',
+                    statusClass: 'status-progress',
+                    body: `
+                        <p><strong>Smart India Hackathon (SIH26167) – ISRO Problem Statement</strong></p>
+                        <p>An agentic vision-language assistant that lets users ask natural-language questions about satellite images and get evidence-grounded answers.</p>
+                        <ul>
+                            <li>Single-image VQA + captioning using BLIP model</li>
+                            <li>Bi-temporal change detection (pixel-diff + VQA)</li>
+                            <li>Confidence calibration with self-doubt flagging</li>
+                            <li>Optical–SAR cross-verification (disagreement detection)</li>
+                            <li>Persona-based auto-report generation (farmer advisory, etc.)</li>
+                            <li>Multi-turn conversation memory</li>
+                        </ul>
+                        <p><strong>Status:</strong> Working prototype built during SIH. Full code on GitHub.</p>
+                    `,
+                    tech: ['Python', 'PyTorch', 'Hugging Face', 'BLIP', 'Streamlit', 'Colab'],
+                    github: 'https://github.com/hanishka06/SatQueryAi',
+                    demo: null
                 },
-                fixit: {
-                    title: 'FixItLocal – Home Services Platform',
-                    description: `A full-stack home services platform that connects customers with verified local workers (plumbers, electricians, cleaners, home tutors, etc.) without any middlemen. Built with HTML5, CSS3, JavaScript, Node.js, Express.js, and SQLite3. Features live location detection, direct worker calling (zero commission), and an integrated marketplace for selling, lending, borrowing, and exchanging items. (Completed)`,
-                    github: 'https://github.com/hanishka06/fixitlocal'
+                ropeway: {
+                    title: 'Gravity Ropeway Safety System',
+                    status: 'Idea',
+                    statusClass: 'status-concept',
+                    body: `
+                        <p>An IoT-based safety system concept for gravity ropeways used by hill farmers to transport produce.</p>
+                        <ul>
+                            <li>Combined load + tension sensing (industrial load cell)</li>
+                            <li>Dual-tier braking: servo-actuated + mechanical disc brake</li>
+                            <li>Automatic spring-steel safety clamp on rope snap</li>
+                            <li>Buzzer + GSM SMS alerts to farmer/maintenance team</li>
+                            <li>Solar trickle-charging + battery bank for unattended operation</li>
+                            <li>Weatherproof enclosure for all electronics</li>
+                        </ul>
+                        <p><strong>Status:</strong> Idea stage. Full design and material plan ready; prototype build pending.</p>
+                    `,
+                    tech: ['ESP32', 'Load Cell', 'MPU6050', 'GSM (SIM800L)', 'Solar', 'IoT'],
+                    github: null,
+                    demo: null
                 },
-                autoflow: {
-                    title: 'AutoFlow – AI Traffic Management',
-                    description: `CCTV‑based AI traffic management system that works on existing infrastructure. Analyzes live feeds to detect congestion, accidents, and violations. Webpage is ready; hardware integration and backend AI engine are in progress.`,
-                    github: null // not uploaded yet
-                },
-                pathfinder: {
-                    title: 'Path Finder – Smart Bus Tracking',
-                    description: `Smart public transport management system providing real-time bus tracking, accurate ETA, digital ticket booking, and SOS alerts. Uses driver/conductor smartphone for location (or GPS tracker for basic phones). Webpage ready; hardware integration pending.`,
-                    github: null
+                ekyatra: {
+                    title: 'EkYatra – Trip Merging Platform',
+                    status: 'Idea',
+                    statusClass: 'status-concept',
+                    body: `
+                        <p>A sustainability-focused platform idea that merges food delivery (Zomato/Swiggy) and ride-hailing (Rapido/RedTaxi) into single trips.</p>
+                        <ul>
+                            <li>One 2-wheeler instead of two → less pollution, lower cost</li>
+                            <li>Rider pays only 75% for the shared trip</li>
+                            <li>Pickup trips from delivery apps can be combined with passenger trips</li>
+                            <li>Route-matching algorithm to find optimal merge points</li>
+                            <li>Incentive design for drivers: higher earnings per trip</li>
+                        </ul>
+                        <p><strong>Status:</strong> Idea and algorithm design complete. Prototype in planning stage.</p>
+                    `,
+                    tech: ['Idea', 'Sustainability', 'Route Optimization', 'Incentive Design'],
+                    github: null,
+                    demo: null
                 },
                 lunalens: {
                     title: 'LunaLens – AI Assistant for Visually Impaired',
-                    description: `AI-powered assistive web app for visually impaired and deaf‑blind people. Uses camera and microphone to describe the environment in Tamil, English, or Tanglish. Features object detection, face recognition, SOS mode, and vibration feedback. Built with Python Flask, SQLite, TensorFlow.js, and face-api.js. Webpage ready; hardware integration pending.`,
-                    github: null
+                    status: 'Webpage Ready',
+                    statusClass: 'status-progress',
+                    body: `
+                        <p>An AI-powered assistive web application for visually impaired and deaf-blind people. Works on any smartphone browser.</p>
+                        <ul>
+                            <li>Real-time camera scene description in Tamil, English, or Tanglish</li>
+                            <li>Object detection, distance estimation, and familiar face recognition</li>
+                            <li>Voice-activated: "Luna, what do you see?"</li>
+                            <li>SOS mode with repeated audio alerts in English + Tamil</li>
+                            <li>6-tap vibration-only mode for deaf-blind users</li>
+                            <li>Offline AI using TensorFlow.js and face-api.js</li>
+                            <li>Family GPS tracking via shared code (no app needed)</li>
+                        </ul>
+                        <p><strong>Status:</strong> Webpage ready. Hardware integration pending.</p>
+                    `,
+                    tech: ['Flask', 'SQLite', 'TensorFlow.js', 'face-api.js', 'Groq Llama 4'],
+                    github: null,
+                    demo: null
+                },
+                carryit: {
+                    title: 'CarryIt – Travel Errand Platform',
+                    status: 'Completed',
+                    statusClass: 'status-completed',
+                    body: `
+                        <p>A community-driven travel errand network that connects travelers with people who need items delivered between cities.</p>
+                        <ul>
+                            <li>Users post trips or delivery requests</li>
+                            <li>Route-matching to find travelers going the same way</li>
+                            <li>Direct connect via mutual interest — no commission fees</li>
+                            <li>Built with Node.js, Express, SQLite3, and Vanilla JS</li>
+                        </ul>
+                        <p><strong>Status:</strong> Completed and deployed.</p>
+                    `,
+                    tech: ['Node.js', 'Express', 'SQLite3', 'Vanilla JS', 'HTML/CSS'],
+                    github: 'https://github.com/hanishka06/CarryIt',
+                    demo: null
+                },
+                fixitlocal: {
+                    title: 'FixItLocal – Home Services Platform',
+                    status: 'Completed',
+                    statusClass: 'status-completed',
+                    body: `
+                        <p>A full-stack home services platform connecting customers with verified local workers — plumbers, electricians, cleaners, tutors, and more.</p>
+                        <ul>
+                            <li>20+ service categories with 84+ pre-loaded workers</li>
+                            <li>Zero commission — direct worker calling</li>
+                            <li>Live location detection</li>
+                            <li>Integrated marketplace for selling, lending, borrowing, exchanging</li>
+                            <li>Same-phone-number login for simplicity</li>
+                            <li>Filters for price, rating, and experience</li>
+                        </ul>
+                        <p><strong>Status:</strong> Completed and deployed.</p>
+                    `,
+                    tech: ['Node.js', 'Express', 'SQLite3', 'HTML5', 'CSS3', 'JavaScript'],
+                    github: 'https://github.com/hanishka06/fixitlocal-project',
+                    demo: null
+                },
+                autoflow: {
+                    title: 'AutoFlow – AI Traffic Management',
+                    status: 'Webpage Ready',
+                    statusClass: 'status-progress',
+                    body: `
+                        <p>A CCTV-based AI traffic management system that works entirely on existing infrastructure — no new hardware installation needed.</p>
+                        <ul>
+                            <li>AI engine analyzes live feeds for congestion, accidents, violations</li>
+                            <li>User subscription system for instant signal delay notifications</li>
+                            <li>Independent signal login for officers to update ground issues</li>
+                            <li>Admin dashboard integrating signals, fines, accidents, police assignments</li>
+                        </ul>
+                        <p><strong>Status:</strong> Webpage ready. AI engine and backend integration in progress.</p>
+                    `,
+                    tech: ['AI', 'Computer Vision', 'CCTV', 'Real-time'],
+                    github: null,
+                    demo: null
+                },
+                pathfinder: {
+                    title: 'Path Finder – Smart Bus Tracking',
+                    status: 'Webpage Ready',
+                    statusClass: 'status-progress',
+                    body: `
+                        <p>A smart public transport management system designed for tier-2 and tier-3 cities.</p>
+                        <ul>
+                            <li>Real-time bus tracking with accurate ETA</li>
+                            <li>Digital ticket booking with UPI payments</li>
+                            <li>SOS alerts, emergency contacts, live location sharing</li>
+                            <li>Live passenger count and lost-and-found services</li>
+                            <li>Uses driver/conductor smartphone for GPS — no separate tracker needed</li>
+                            <li>Low-cost approach suitable for smaller cities</li>
+                        </ul>
+                        <p><strong>Status:</strong> Webpage ready. GPS integration pending.</p>
+                    `,
+                    tech: ['GPS', 'App', 'Real-time', 'UPI'],
+                    github: null,
+                    demo: null
                 }
             };
 
-            // ----- Helper: Switch section -----
+            // ===== SECTION SWITCH =====
             function switchSection(targetId) {
-                sections.forEach(sec => {
-                    sec.classList.remove('active');
-                    sec.style.display = 'none';
-                });
-
+                sections.forEach(sec => { sec.classList.remove('active'); sec.style.display = 'none'; });
                 const targetSection = document.getElementById(targetId);
                 if (targetSection) {
                     targetSection.style.display = '';
                     targetSection.classList.add('active');
-                    if (targetId === 'home') {
-                        targetSection.style.display = 'flex';
-                    }
+                    if (targetId === 'home') targetSection.style.display = 'flex';
                 }
-
                 navLinks.forEach(link => {
                     link.classList.remove('active');
-                    if (link.dataset.target === targetId) {
-                        link.classList.add('active');
-                    }
+                    if (link.dataset.target === targetId) link.classList.add('active');
                 });
-
                 if (mobileMenu.classList.contains('open')) {
                     mobileMenu.classList.remove('open');
                     menuToggle.querySelector('i').className = 'fas fa-bars';
                 }
-
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
 
-            // ----- Nav click listeners -----
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
                     const target = this.dataset.target;
-                    if (target) {
-                        switchSection(target);
-                    }
+                    if (target) switchSection(target);
                 });
             });
 
-            // ----- "Get in Touch" button -----
-            const getInTouchBtn = document.querySelector('.hero-buttons .btn-primary');
-            if (getInTouchBtn) {
-                getInTouchBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    switchSection('contact');
-                });
-            }
+            document.querySelector('.hero-buttons .btn-primary').addEventListener('click', function(e) {
+                e.preventDefault();
+                switchSection('contact');
+            });
 
-            // ----- Mobile Menu -----
+            // ===== MOBILE MENU =====
             menuToggle.addEventListener('click', function() {
                 mobileMenu.classList.toggle('open');
-                const icon = this.querySelector('i');
-                icon.className = mobileMenu.classList.contains('open') ? 'fas fa-times' : 'fas fa-bars';
+                this.querySelector('i').className = mobileMenu.classList.contains('open') ? 'fas fa-times' : 'fas fa-bars';
             });
 
-            // ----- Theme -----
+            // ===== THEME =====
             const STORAGE_KEY = 'portfolio-theme';
-
             function getPreferredTheme() {
                 const stored = localStorage.getItem(STORAGE_KEY);
                 if (stored) return stored;
-                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
-                return 'light';
+                return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
             }
-
             function setTheme(theme) {
                 document.documentElement.setAttribute('data-theme', theme);
                 localStorage.setItem(STORAGE_KEY, theme);
                 themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
             }
-
             setTheme(getPreferredTheme());
-
             themeToggle.addEventListener('click', function() {
                 const current = document.documentElement.getAttribute('data-theme') || 'light';
                 setTheme(current === 'light' ? 'dark' : 'light');
             });
-
             document.addEventListener('keydown', function(e) {
-                if (e.ctrlKey && e.shiftKey && (e.key === 'D' || e.key === 'd')) {
-                    e.preventDefault();
-                    themeToggle.click();
-                }
+                if (e.ctrlKey && e.shiftKey && (e.key === 'D' || e.key === 'd')) { e.preventDefault(); themeToggle.click(); }
             });
 
-            // ----- Navbar shadow -----
+            // ===== NAVBAR SHADOW =====
             window.addEventListener('scroll', function() {
                 navbar.style.boxShadow = window.scrollY > 20 ? '0 4px 30px rgba(0,0,0,0.08)' : 'none';
             });
 
-            // ----- Contact Form (mailto) -----
+            // ===== CONTACT FORM =====
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 const name = document.getElementById('name').value.trim();
                 const email = document.getElementById('email').value.trim();
                 const message = document.getElementById('message').value.trim();
-
-                if (!name || !email || !message) {
-                    alert('Please fill in all fields.');
-                    return;
-                }
-                if (!email.includes('@') || !email.includes('.')) {
-                    alert('Please enter a valid email address.');
-                    return;
-                }
-
+                if (!name || !email || !message) { alert('Please fill in all fields.'); return; }
+                if (!email.includes('@') || !email.includes('.')) { alert('Please enter a valid email address.'); return; }
                 const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
                 const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
                 window.location.href = `mailto:jhanishka06@gmail.com?subject=${subject}&body=${body}`;
@@ -1671,25 +1565,40 @@
                 alert('✅ Your message has been sent! I\'ll get back to you soon.');
             });
 
-            // ----- Project Modal -----
+            // ===== PROJECT MODAL =====
             const projectCards = document.querySelectorAll('.project-card[data-project]');
 
-            function openModal(projectKey) {
-                const data = projectData[projectKey];
+            function openModal(key) {
+                const data = projectData[key];
                 if (!data) return;
 
                 modalTitle.textContent = data.title;
-                modalBody.innerHTML = `<p>${data.description}</p>`;
+                modalStatus.innerHTML = `<span class="project-status ${data.statusClass}">${data.status}</span>`;
+                modalBody.innerHTML = data.body;
+                modalTech.innerHTML = data.tech.map(t => `<span>${t}</span>`).join('');
 
-                // Build action buttons – only show GitHub if available
                 modalActions.innerHTML = '';
-                if (data.github && data.github !== '#') {
+                if (data.github) {
                     const btn = document.createElement('a');
                     btn.href = data.github;
                     btn.target = '_blank';
-                    btn.className = 'btn btn-primary btn-sm';
+                    btn.className = 'btn btn-gh';
                     btn.innerHTML = '<i class="fab fa-github"></i> View on GitHub';
                     modalActions.appendChild(btn);
+                }
+                if (data.demo) {
+                    const btn = document.createElement('a');
+                    btn.href = data.demo;
+                    btn.target = '_blank';
+                    btn.className = 'btn btn-outline btn-sm';
+                    btn.innerHTML = '<i class="fas fa-external-link-alt"></i> Live Demo';
+                    modalActions.appendChild(btn);
+                }
+                if (!data.github && !data.demo) {
+                    const note = document.createElement('p');
+                    note.style.cssText = 'color:var(--text-muted);font-size:0.85rem;margin:0;';
+                    note.textContent = 'GitHub repository coming soon.';
+                    modalActions.appendChild(note);
                 }
 
                 modalOverlay.classList.add('active');
@@ -1709,21 +1618,15 @@
             });
 
             modalClose.addEventListener('click', closeModal);
-            modalOverlay.addEventListener('click', function(e) {
-                if (e.target === this) closeModal();
-            });
+            modalOverlay.addEventListener('click', function(e) { if (e.target === this) closeModal(); });
             document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
-                    closeModal();
-                }
+                if (e.key === 'Escape' && modalOverlay.classList.contains('active')) closeModal();
             });
 
-            // ----- Ensure Home is visible on load -----
+            // ===== INIT =====
             document.addEventListener('DOMContentLoaded', function() {
                 const homeSection = document.getElementById('home');
-                if (homeSection) {
-                    homeSection.style.display = 'flex';
-                }
+                if (homeSection) homeSection.style.display = 'flex';
             });
 
             console.log('🚀 Hanishka Portfolio loaded!');
