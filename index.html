@@ -5,15 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hanishka | AI & Data Science Portfolio</title>
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
     <style>
-        /* ============================================================
-               THEME: BROWN / BEIGE (Default)
-            ============================================================ */
         :root {
             --bg-primary: #fcf9f5;
             --bg-secondary: #f5ede4;
@@ -37,7 +32,6 @@
             --tag-text: #a67c52;
         }
 
-        /* Dark Theme – Brown-tinted */
         [data-theme="dark"] {
             --bg-primary: #1a120e;
             --bg-secondary: #2a1f18;
@@ -58,7 +52,6 @@
             --tag-text: #c9a87c;
         }
 
-        /* ===== RESET & BASE ===== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body {
@@ -74,12 +67,10 @@
         img { max-width: 100%; display: block; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-        /* ===== SCROLLBAR ===== */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--bg-secondary); }
         ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
 
-        /* ===== BUTTONS ===== */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -124,7 +115,6 @@
             transform: translateY(-2px);
         }
 
-        /* ===== NAVIGATION ===== */
         .navbar {
             position: fixed;
             top: 0;
@@ -205,7 +195,6 @@
             padding: 4px;
         }
 
-        /* ===== FLOATING SOCIAL BAR ===== */
         .floating-social {
             position: fixed;
             right: 20px;
@@ -243,9 +232,6 @@
             box-shadow: 0 6px 16px rgba(166, 124, 82, 0.35);
         }
 
-        /* ============================================================
-               PAGE SECTIONS
-            ============================================================ */
         .page-section {
             display: none;
             min-height: 100vh;
@@ -260,7 +246,6 @@
             100% { opacity: 1; transform: translateY(0); }
         }
 
-        /* ===== HOME ===== */
         #home { background: var(--hero-gradient); transition: background 0.4s; min-height: 100vh; }
         #home .container {
             display: grid;
@@ -334,7 +319,6 @@
             background-color: var(--bg-secondary);
         }
 
-        /* ===== ABOUT ===== */
         #about { background: var(--bg-secondary); }
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
         .about-text p { color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8; margin-bottom: 16px; }
@@ -352,7 +336,6 @@
         .stat-card .stat-number { font-size: 2rem; font-weight: 800; color: var(--accent); display: block; }
         .stat-card .stat-label { font-size: 0.9rem; color: var(--text-muted); font-weight: 500; }
 
-        /* ===== EDUCATION ===== */
         .education-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -404,7 +387,6 @@
         }
         .edu-achievement i { font-size: 1.2rem; }
 
-        /* ===== SKILLS ===== */
         #skills { background: var(--bg-secondary); }
         .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
         .skill-category {
@@ -438,7 +420,6 @@
         }
         .skill-tag:hover { background: var(--accent); color: #fff; border-color: var(--accent); transform: translateY(-2px); }
 
-        /* ===== PROJECTS ===== */
         .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; }
         .project-card {
             background: var(--bg-card);
@@ -517,12 +498,9 @@
             font-size: 1.1rem;
             color: var(--text-muted);
             transition: var(--transition);
-            display: inline-flex;
-            gap: 8px;
         }
         .project-footer .gh-link:hover { color: var(--accent); transform: scale(1.2); }
 
-        /* ===== CERTIFICATIONS ===== */
         #certificates { background: var(--bg-secondary); }
         .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
         .cert-card {
@@ -552,7 +530,6 @@
         .cert-info h4 { font-size: 1rem; font-weight: 600; margin-bottom: 2px; }
         .cert-info p { font-size: 0.85rem; color: var(--text-muted); }
 
-        /* ===== CONTACT ===== */
         #contact { background: var(--bg-secondary); }
         .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
         .contact-info h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 8px; }
@@ -630,7 +607,6 @@
         }
         .form-group textarea { min-height: 120px; resize: vertical; }
 
-        /* ===== SECTION HEADER ===== */
         .section-header { text-align: center; max-width: 640px; margin: 0 auto 48px; }
         .section-header .section-tag {
             display: inline-block;
@@ -647,7 +623,6 @@
         .section-header h2 { font-size: 2.4rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 12px; }
         .section-header p { color: var(--text-secondary); font-size: 1.05rem; }
 
-        /* ===== MODAL ===== */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -707,7 +682,6 @@
         }
         .modal-content .modal-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-color); }
 
-        /* ===== FOOTER ===== */
         footer {
             background: var(--bg-primary);
             border-top: 1px solid var(--border-color);
@@ -719,7 +693,6 @@
         }
         footer a { color: var(--accent); font-weight: 500; }
 
-        /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
             #home .container { grid-template-columns: 1fr; text-align: center; }
             .hero-content h1 { font-size: 2.8rem; }
@@ -783,7 +756,6 @@
 </head>
 <body>
 
-    <!-- ===== NAVIGATION ===== -->
     <nav class="navbar" id="navbar">
         <div class="container">
             <a href="#" class="logo">H<span>anishka</span></a>
@@ -807,7 +779,6 @@
         </div>
     </nav>
 
-    <!-- ===== FLOATING SOCIAL BAR ===== -->
     <div class="floating-social">
         <a href="mailto:jhanishka06@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         <a href="https://wa.me/916379684480" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
@@ -816,11 +787,6 @@
         <a href="https://www.linkedin.com/in/hanishka-j-8a6784326/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
     </div>
 
-    <!-- ============================================================
-    PAGE SECTIONS
-    ============================================================ -->
-
-    <!-- ===== HOME ===== -->
     <section class="page-section active" id="home">
         <div class="container">
             <div class="hero-content">
@@ -855,7 +821,6 @@
         </div>
     </section>
 
-    <!-- ===== ABOUT ===== -->
     <section class="page-section" id="about">
         <div class="container">
             <div class="section-header">
@@ -901,7 +866,6 @@
         </div>
     </section>
 
-    <!-- ===== EDUCATION ===== -->
     <section class="page-section" id="education">
         <div class="container">
             <div class="section-header">
@@ -932,7 +896,6 @@
         </div>
     </section>
 
-    <!-- ===== SKILLS ===== -->
     <section class="page-section" id="skills">
         <div class="container">
             <div class="section-header">
@@ -942,45 +905,20 @@
             </div>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h4><i class="fas fa-code"></i> Programming</h4>
+                    <h4><i class="fas fa-code"></i> Programming Languages</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python <span style="font-size:0.7rem; opacity:0.7;">(Learning)</span></span>
+                        <span class="skill-tag">Java <span style="font-size:0.7rem; opacity:0.7;">(Beginner)</span></span>
+                        <span class="skill-tag">C <span style="font-size:0.7rem; opacity:0.7;">(Beginner)</span></span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-brain"></i> Currently Learning</h4>
                     <div class="skill-tags">
                         <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">C</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">CSS</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h4><i class="fas fa-brain"></i> AI / Machine Learning</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">PyTorch</span>
-                        <span class="skill-tag">Hugging Face</span>
-                        <span class="skill-tag">BLIP</span>
-                        <span class="skill-tag">TensorFlow.js</span>
-                        <span class="skill-tag">VQA</span>
-                        <span class="skill-tag">LLMs</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h4><i class="fas fa-globe"></i> Web Development</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Express</span>
-                        <span class="skill-tag">Flask</span>
-                        <span class="skill-tag">Streamlit</span>
-                        <span class="skill-tag">SQLite</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h4><i class="fas fa-microchip"></i> IoT / Hardware</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">ESP32</span>
-                        <span class="skill-tag">Load Cell</span>
-                        <span class="skill-tag">MPU6050</span>
-                        <span class="skill-tag">GSM</span>
-                        <span class="skill-tag">Solar</span>
+                        <span class="skill-tag">AI Fundamentals</span>
+                        <span class="skill-tag">Agentic AI</span>
+                        <span class="skill-tag">Large Language Models (LLMs)</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -989,25 +927,23 @@
                         <span class="skill-tag">Git</span>
                         <span class="skill-tag">GitHub</span>
                         <span class="skill-tag">VS Code</span>
-                        <span class="skill-tag">Colab</span>
                         <span class="skill-tag">MS Word</span>
+                        <span class="skill-tag">MS PowerPoint</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== PROJECTS ===== -->
     <section class="page-section" id="projects">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Projects</span>
                 <h2>Things I've Built</h2>
-                <p>Click any project to see full details, tech stack, and links.</p>
+                <p>Click any project to see full details, tech stack, and GitHub link.</p>
             </div>
             <div class="projects-grid">
 
-                <!-- SatQuery AI -->
                 <div class="project-card" data-project="satquery">
                     <div class="project-icon"><i class="fas fa-satellite"></i></div>
                     <h4>SatQuery AI</h4>
@@ -1023,23 +959,6 @@
                     </div>
                 </div>
 
-                <!-- LunaLens -->
-                <div class="project-card" data-project="lunalens">
-                    <div class="project-icon"><i class="fas fa-moon"></i></div>
-                    <h4>LunaLens 4.0</h4>
-                    <p class="project-summary">AI accessibility assistant for visually impaired and deaf-blind users.</p>
-                    <div class="project-tech">
-                        <span>TensorFlow.js</span><span>face-api.js</span><span>Groq</span>
-                    </div>
-                    <div class="project-footer">
-                        <span class="project-status status-completed">Live Demo</span>
-                        <a href="https://hanishka06.github.io/LunaLens/" target="_blank" class="gh-link" onclick="event.stopPropagation();">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Gravity Ropeway Safety -->
                 <div class="project-card" data-project="ropeway">
                     <div class="project-icon"><i class="fas fa-mountain"></i></div>
                     <h4>Gravity Ropeway Safety System</h4>
@@ -1053,7 +972,6 @@
                     </div>
                 </div>
 
-                <!-- EkYatra -->
                 <div class="project-card" data-project="ekyatra">
                     <div class="project-icon"><i class="fas fa-route"></i></div>
                     <h4>EkYatra</h4>
@@ -1067,7 +985,19 @@
                     </div>
                 </div>
 
-                <!-- CarryIt -->
+                <div class="project-card" data-project="lunalens">
+                    <div class="project-icon"><i class="fas fa-moon"></i></div>
+                    <h4>LunaLens</h4>
+                    <p class="project-summary">AI assistive app for visually impaired – describes surroundings in Tamil/English.</p>
+                    <div class="project-tech">
+                        <span>Flask</span><span>TensorFlow.js</span><span>face-api.js</span><span>SQLite</span>
+                    </div>
+                    <div class="project-footer">
+                        <span class="project-status status-progress">Webpage Ready</span>
+                        <i class="fas fa-circle-info" style="color:var(--text-muted);font-size:0.9rem;"></i>
+                    </div>
+                </div>
+
                 <div class="project-card" data-project="carryit">
                     <div class="project-icon"><i class="fas fa-suitcase-rolling"></i></div>
                     <h4>CarryIt</h4>
@@ -1083,7 +1013,6 @@
                     </div>
                 </div>
 
-                <!-- FixItLocal -->
                 <div class="project-card" data-project="fixitlocal">
                     <div class="project-icon"><i class="fas fa-wrench"></i></div>
                     <h4>FixItLocal</h4>
@@ -1099,7 +1028,6 @@
                     </div>
                 </div>
 
-                <!-- AutoFlow -->
                 <div class="project-card" data-project="autoflow">
                     <div class="project-icon"><i class="fas fa-traffic-light"></i></div>
                     <h4>AutoFlow – AI Traffic Management</h4>
@@ -1113,7 +1041,6 @@
                     </div>
                 </div>
 
-                <!-- Path Finder -->
                 <div class="project-card" data-project="pathfinder">
                     <div class="project-icon"><i class="fas fa-bus"></i></div>
                     <h4>Path Finder – Smart Bus Tracking</h4>
@@ -1131,7 +1058,6 @@
         </div>
     </section>
 
-    <!-- ===== CERTIFICATIONS ===== -->
     <section class="page-section" id="certificates">
         <div class="container">
             <div class="section-header">
@@ -1207,7 +1133,6 @@
         </div>
     </section>
 
-    <!-- ===== CONTACT ===== -->
     <section class="page-section" id="contact">
         <div class="container">
             <div class="section-header">
@@ -1258,17 +1183,20 @@
                 <div class="contact-form">
                     <h4>Send a message</h4>
                     <form id="contactForm">
+                        <input type="hidden" name="access_key" value="ac524fdc-987b-41ef-ba9c-ef5d52889f6b">
+                        <input type="hidden" name="subject" value="New message from Hanishka Portfolio">
+                        <input type="hidden" name="from_name" value="Hanishka Portfolio">
                         <div class="form-group">
                             <label for="name">Your Name</label>
-                            <input type="text" id="name" placeholder="John Doe" required />
+                            <input type="text" id="name" name="name" placeholder="John Doe" required />
                         </div>
                         <div class="form-group">
                             <label for="email">Your Email</label>
-                            <input type="email" id="email" placeholder="john@example.com" required />
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required />
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" placeholder="Hi Hanishka, I'd love to connect..." required></textarea>
+                            <textarea id="message" name="message" placeholder="Hi Hanishka, I'd love to connect..." required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
                             <i class="fas fa-paper-plane"></i> Send Message
@@ -1279,7 +1207,6 @@
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
             <p>
@@ -1292,7 +1219,6 @@
         </div>
     </footer>
 
-    <!-- ===== MODAL ===== -->
     <div class="modal-overlay" id="projectModal">
         <div class="modal-content">
             <button class="modal-close" id="modalClose">&times;</button>
@@ -1304,9 +1230,6 @@
         </div>
     </div>
 
-    <!-- ============================================================
-    JAVASCRIPT
-    ============================================================ -->
     <script>
         (function() {
             'use strict';
@@ -1328,7 +1251,6 @@
             const modalTech = document.getElementById('modalTech');
             const modalActions = document.getElementById('modalActions');
 
-            // ===== PROJECT DATA =====
             const projectData = {
                 satquery: {
                     title: 'SatQuery AI',
@@ -1350,27 +1272,6 @@
                     tech: ['Python', 'PyTorch', 'Hugging Face', 'BLIP', 'Streamlit', 'Colab'],
                     github: 'https://github.com/hanishka06/SatQueryAi',
                     demo: null
-                },
-                lunalens: {
-                    title: 'LunaLens 4.0 – AI Accessibility Assistant',
-                    status: 'Live Demo',
-                    statusClass: 'status-completed',
-                    body: `
-                        <p>A mobile-first accessibility web app for visually impaired and deaf-blind users. Runs entirely in the browser — no installation needed.</p>
-                        <ul>
-                            <li>Real-time object detection with distance (COCO-SSD + TensorFlow.js)</li>
-                            <li>Face recognition — register family, auto-announce when detected</li>
-                            <li>Scene description via Groq Llama 4 Vision + offline fallback</li>
-                            <li>Voice activation: "Luna, what do you see?"</li>
-                            <li>SOS mode with repeated English + Tamil audio alerts</li>
-                            <li>Deaf-blind mode: 6 taps switches to vibration-only feedback</li>
-                            <li>Live GPS tracking with share code (no app needed for family)</li>
-                        </ul>
-                        <p><strong>Status:</strong> Live on GitHub Pages.</p>
-                    `,
-                    tech: ['TensorFlow.js', 'COCO-SSD', 'face-api.js', 'Groq Llama 4', 'Web Speech API'],
-                    github: 'https://github.com/hanishka06/LunaLens',
-                    demo: 'https://hanishka06.github.io/LunaLens/'
                 },
                 ropeway: {
                     title: 'Gravity Ropeway Safety System',
@@ -1408,6 +1309,27 @@
                         <p><strong>Status:</strong> Idea and algorithm design complete. Prototype in planning stage.</p>
                     `,
                     tech: ['Idea', 'Sustainability', 'Route Optimization', 'Incentive Design'],
+                    github: null,
+                    demo: null
+                },
+                lunalens: {
+                    title: 'LunaLens – AI Assistant for Visually Impaired',
+                    status: 'Webpage Ready',
+                    statusClass: 'status-progress',
+                    body: `
+                        <p>An AI-powered assistive web application for visually impaired and deaf-blind people. Works on any smartphone browser.</p>
+                        <ul>
+                            <li>Real-time camera scene description in Tamil, English, or Tanglish</li>
+                            <li>Object detection, distance estimation, and familiar face recognition</li>
+                            <li>Voice-activated: "Luna, what do you see?"</li>
+                            <li>SOS mode with repeated audio alerts in English + Tamil</li>
+                            <li>6-tap vibration-only mode for deaf-blind users</li>
+                            <li>Offline AI using TensorFlow.js and face-api.js</li>
+                            <li>Family GPS tracking via shared code (no app needed)</li>
+                        </ul>
+                        <p><strong>Status:</strong> Webpage ready. Hardware integration pending.</p>
+                    `,
+                    tech: ['Flask', 'SQLite', 'TensorFlow.js', 'face-api.js', 'Groq Llama 4'],
                     github: null,
                     demo: null
                 },
@@ -1489,7 +1411,6 @@
                 }
             };
 
-            // ===== SECTION SWITCH =====
             function switchSection(targetId) {
                 sections.forEach(sec => { sec.classList.remove('active'); sec.style.display = 'none'; });
                 const targetSection = document.getElementById(targetId);
@@ -1522,13 +1443,11 @@
                 switchSection('contact');
             });
 
-            // ===== MOBILE MENU =====
             menuToggle.addEventListener('click', function() {
                 mobileMenu.classList.toggle('open');
                 this.querySelector('i').className = mobileMenu.classList.contains('open') ? 'fas fa-times' : 'fas fa-bars';
             });
 
-            // ===== THEME =====
             const STORAGE_KEY = 'portfolio-theme';
             function getPreferredTheme() {
                 const stored = localStorage.getItem(STORAGE_KEY);
@@ -1549,27 +1468,41 @@
                 if (e.ctrlKey && e.shiftKey && (e.key === 'D' || e.key === 'd')) { e.preventDefault(); themeToggle.click(); }
             });
 
-            // ===== NAVBAR SHADOW =====
             window.addEventListener('scroll', function() {
                 navbar.style.boxShadow = window.scrollY > 20 ? '0 4px 30px rgba(0,0,0,0.08)' : 'none';
             });
 
-            // ===== CONTACT FORM =====
-            contactForm.addEventListener('submit', function(e) {
+            contactForm.addEventListener('submit', async function(e) {
                 e.preventDefault();
-                const name = document.getElementById('name').value.trim();
-                const email = document.getElementById('email').value.trim();
-                const message = document.getElementById('message').value.trim();
-                if (!name || !email || !message) { alert('Please fill in all fields.'); return; }
-                if (!email.includes('@') || !email.includes('.')) { alert('Please enter a valid email address.'); return; }
-                const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-                window.location.href = `mailto:jhanishka06@gmail.com?subject=${subject}&body=${body}`;
-                contactForm.reset();
-                alert('✅ Your message has been sent! I\'ll get back to you soon.');
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                submitBtn.disabled = true;
+
+                const formData = new FormData(contactForm);
+
+                try {
+                    const response = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    const data = await response.json();
+
+                    if (data.success) {
+                        contactForm.reset();
+                        alert('✅ Message sent! I will get back to you soon.');
+                    } else {
+                        alert('❌ Something went wrong. Please email me directly at jhanishka06@gmail.com');
+                    }
+                } catch (error) {
+                    alert('❌ Network error. Please email me directly at jhanishka06@gmail.com');
+                }
+
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
             });
 
-            // ===== PROJECT MODAL =====
             const projectCards = document.querySelectorAll('.project-card[data-project]');
 
             function openModal(key) {
@@ -1594,14 +1527,14 @@
                     const btn = document.createElement('a');
                     btn.href = data.demo;
                     btn.target = '_blank';
-                    btn.className = 'btn btn-primary';
+                    btn.className = 'btn btn-outline btn-sm';
                     btn.innerHTML = '<i class="fas fa-external-link-alt"></i> Live Demo';
                     modalActions.appendChild(btn);
                 }
                 if (!data.github && !data.demo) {
                     const note = document.createElement('p');
                     note.style.cssText = 'color:var(--text-muted);font-size:0.85rem;margin:0;';
-                    note.textContent = 'Repository coming soon.';
+                    note.textContent = 'GitHub repository coming soon.';
                     modalActions.appendChild(note);
                 }
 
@@ -1627,7 +1560,6 @@
                 if (e.key === 'Escape' && modalOverlay.classList.contains('active')) closeModal();
             });
 
-            // ===== INIT =====
             document.addEventListener('DOMContentLoaded', function() {
                 const homeSection = document.getElementById('home');
                 if (homeSection) homeSection.style.display = 'flex';
